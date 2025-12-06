@@ -6,9 +6,29 @@
     "dev": "bunx --bun astro dev",
     "build": "bunx --bun astro build",
     "preview": "bunx --bun astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "biome:format": "bunx biome format --write",
+    "biome:check": "bunx biome check --write",
+    "biome:lint": "bunx biome lint --write"
+  },
+  "exports": {
+    "./biome": "./biome.json"
   },
   "dependencies": {
-    "astro": "^5.16.4"
+    "@astrojs/react": "^4.4.2",
+    "@astrojs/ts-plugin": "^1.10.6",
+    "@tailwindcss/vite": "^4.1.17",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "astro": "^5.16.4",
+    "lucide": "^0.556.0",
+    "lucide-react": "^0.556.0",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "tailwindcss": "^4.1.17"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.3.8",
+    "daisyui": "^5.5.8"
   }
 }

@@ -1,0 +1,8 @@
+/* biome-ignore format: Tailwind/daisyui syntax */
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes:
+    dark --default,
+    dark preferslight,
+    cupcake;
+}
