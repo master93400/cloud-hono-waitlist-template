@@ -2,7 +2,10 @@
   "name": "cloud-hono-waitlist-template",
   "type": "module",
   "version": "0.0.1",
+  "homepage": "https://master93400.github.io/cloud-hono-waitlist-template",
   "scripts": {
+    "predeploy": "bun run build",
+    "deploy": "gh-pages -d build",
     "dev": "bunx --bun astro dev",
     "build": "bunx --bun astro build",
     "preview": "bunx --bun astro preview",
