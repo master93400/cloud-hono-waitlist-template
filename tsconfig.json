@@ -14,5 +14,7 @@
   "path": {
     "@components/*": ["./src/components/*"],
     "@layouts/*": ["./src/layouts/*"]
-  }
+  },
+
+  "types":["worker-configuration.d.ts"]
 }

@@ -1,16 +1,20 @@
 {
   "name": "cloud-hono-waitlist-template",
-  "type": "module",
   "version": "0.0.1",
-    "homepage": "https://master93400.github.io/cloud-hono-waitlist-template",
+  "type": "module",
+  "homepage": "https://master93400.github.io/cloud-hono-waitlist-template",
+  "module": "./src/server/index.ts",
+  "directory":"./src",
   "scripts": {
+    "server": "bun --watch ./src/server/index.ts",
     "dev": "bunx --bun astro dev",
     "build": "bunx --bun astro build",
     "preview": "bunx --bun astro preview",
     "astro": "astro",
     "biome:format": "bunx biome format --write",
     "biome:check": "bunx biome check --write",
-    "biome:lint": "bunx biome lint --write"
+    "biome:lint": "bunx biome lint --write",
+    "worker": "wrangler dev"
   },
   "exports": {
     "./biome": "./biome.json"
@@ -22,11 +26,13 @@
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "astro": "^5.16.4",
+    "hono": "^4.10.8",
     "lucide": "^0.556.0",
     "lucide-react": "^0.556.0",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
-    "tailwindcss": "^4.1.17"
+    "tailwindcss": "^4.1.17",
+    "wrangler": "^4.53.0"
   },
   "devDependencies": {
     "@biomejs/biome": "2.3.8",

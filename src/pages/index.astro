@@ -3,6 +3,7 @@ import Hero from "../components/Hero.astro";
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import {Signup} from "../components/Signup.tsx";
+import MyInteractiveComponent  from "../components/MyInteractiveComponent.tsx"
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
@@ -12,11 +13,12 @@ import {Signup} from "../components/Signup.tsx";
 	<Hero />
 	<div class="grid gap-4 justify-items-center">
 	<Signup />
+	<MyInteractiveComponent client:load/>
 	</div >
 	<div class=" grid gap-4 justify-items-center">
 	<Card title="Get Interview Rady" description="Need to bradh" />
 	<Card title="Review AI Slop Faster" description="Need to bradh" />
 	<Card title="Code Faster" description="Need to bradh" />
 	</div>
-	</main>
+</main>
 </Layout>
