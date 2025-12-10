@@ -4,7 +4,7 @@
   "type": "module",
   "homepage": "https://master93400.github.io/cloud-hono-waitlist-template",
   "module": "./src/server/index.ts",
-  "directory":"./src",
+  "directory": "./src",
   "scripts": {
     "server": "bun --watch ./src/server/index.ts",
     "dev": "bunx --bun astro dev",
@@ -14,7 +14,8 @@
     "biome:format": "bunx biome format --write",
     "biome:check": "bunx biome check --write",
     "biome:lint": "bunx biome lint --write",
-    "worker": "wrangler dev"
+    "worker": "wrangler dev",
+    "start": "concurrently 'bun worker' 'bun dev'"
   },
   "exports": {
     "./biome": "./biome.json"
@@ -36,6 +37,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.3.8",
+    "concurrently": "^9.2.1",
     "daisyui": "^5.5.8"
   }
 }
